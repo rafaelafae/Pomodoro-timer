@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --font-title: "Balsamiq Sans", sans-serif;
+  --font-subtitle: "DM Sans", sans-serif;
+  --font-text: "Montserrat", sans-serif;
+  font-size: 62.5%;
+  --color_box0: #bbedde;
+  --color_box1: #ff8e8f;
+  --color_box2: #39afdb;
+  --color_box3: #9adff8;
+  --color_box4: #ffdb5e;
+  --color_box5: #dfc6f6;
+  --color_box6: #ffbee5;
+  --color_box7: #f88748;
+  --color_box8: #ffffff;
+  --color_box9: #000000;
+  --color_box10: #feffab;
+  --color_box11: #40dfaf;
+  --color_font: #212a3e;
+}
+
+.font__tittle {
+  font-family: var(--font-title);
+  font-size: 2.6rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--color_font);
+}
+
+.font__subtittle {
+  font-family: var(--font-subtitle);
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--color_font);
+}
+
+.font__text {
+  font-family: var(--font-text);
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 2rem;
+  color: var(--color_font);
+}
+
+/* RODAPÉ */
+.footer {
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    var(--color_box5) 100%,
+    var(--color_box6) 60%,
+    var(--color_box3) 30%,
+    var(--color_box2) 0%
+  );
+}
