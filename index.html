@@ -1,30 +1,103 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-contexto="focus">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" type="image/png" href="/img/icons/icons8-cronômetro-40.png">
+    <title>Pomodoro Timer</title>
+
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/display.css">
     <link rel="stylesheet" href="/styles/styles.css">
 
-    <link rel="icon" type="image/png" href="/img/icons/icons8-technique-64.png">
-    <title>Pomodoro Timer</title>
-
 </head>
 
 <body>
+    <main>
+        <!-- HEADER -->
+        <header>
+            <figure class="app__logo-figure">
+                <img class="img-logo" src="/img/icons/icons8-cronômetro-40.png" alt="">
+                <h1>Pomodoro Timer</h1>
+            </figure>
+        </header>
 
+        <!-- BANNER -->
+        <section class="app__section-banner-container">
 
-    <footer class="footer">
+            <img class="app__figure" src="/img/focus.png" alt="">
 
-        <p class="font__tittle">Desenvolvido por Rafaela Faé Theodoro</P>
+            <h1 class="app__title">
+                Otimize sua <br>produtividade,<br>
+                <strong class="app__title-strong">mergulhe no <br> que importa.</strong>
+            </h1>
 
-    </footer>
+        </section>
 
-    <script src="script.js"></script>
+        <!-- CARD POMODORO -->
+        <section class="app__section-card-container">
+            <div class="app__card">
+                <ul class="app__card-list">
+                    <li>
+                        <button data-contexto="foco" class="app__card-button" button--focus>Foco</button>
+                    </li>
+
+                    <li>
+                        <button data-contexto="short" class="app__card-button" button--shortrest>Descanso
+                            curto</button>
+                    </li>
+
+                    <li>
+                        <button data-contexto="long" class="app__card-button" button--longrest>Descanso
+                            longo</button>
+                    </li>
+                </ul>
+
+                <div id="timer" class="app__card-timer"></div>
+
+                <ul class="app__card-list">
+                    <li>
+                        <label class="toggle">
+                            <input class="toggle-checkbox" type="checkbox" id="alternar-musica">
+                            <div class="toggle-switch"></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="app__card-list-label" for="alternar-musica">
+                            Música
+                        </label>
+                    </li>
+                </ul>
+
+                <div class="app__card-primary-button-wrapper">
+                    <button id="start-pause" class="app__card-primary-button">
+                        <img class="app__card-primary-button-icon" src="/img/play-white.png" alt="">
+                        <span>Start</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="app__footer">
+            <p class="app__footer-text">
+                Desenvolvido por Rafaela Faé Theodoro.
+            </p>
+            <div class="icons-footer">
+                <a class="link-footer" href="https://www.linkedin.com/in/rafaelafae/"><img
+                        src="/img/icons/icons8-linkedin-100.png" class="cover__icons"></a>
+                <a class="link-footer" href="https://github.com/rafaelafae"><img src="/img/icons/icons8-github-100.png"
+                        class="cover__icons"></a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="/script.js"></script>
+
 </body>
 
 </html>

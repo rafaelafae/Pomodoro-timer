@@ -1,0 +1,107 @@
+/* HEADER */
+.app__logo-figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+/* BANNER */
+
+.app__section-banner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.app__figure {
+  justify-self: center;
+  align-items: center;
+}
+
+/* CARD POMODORO */
+
+.app__section-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.app__card-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.app__card-primary-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.app__card-primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* TOGGLER */
+.toggle {
+  display: inline-block;
+}
+
+.toggle-switch {
+  display: inline-block;
+}
+
+.toggle-switch:before {
+  display: block;
+}
+
+/* FOOTER */
+.app__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+/* TABLETS */
+@media (max-width: 1024px) and (min-width: 451px) {
+  .app__section-banner-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 450px) {
+  .app__logo-figure {
+    flex-direction: column;
+  }
+
+  .app__section-banner-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .app__card-list {
+    flex-direction: column;
+  }
+
+  .app__footer {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

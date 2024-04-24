@@ -1,59 +1,296 @@
-@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap");
 
 :root {
-  --font-title: "Balsamiq Sans", sans-serif;
-  --font-subtitle: "DM Sans", sans-serif;
-  --font-text: "Montserrat", sans-serif;
+  --color-primary: #424769;
+  --color-secondary: #fff;
+  --color-third: #365486;
+  --fundo-card-timer: rgba(223, 150, 236, 0.3);
+  --lils: #b872ff;
+  --linear-botes: linear-gradient(180deg, #5bbcff 0%, #7077a1 100%);
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Unbounded", sans-serif;
   font-size: 62.5%;
-  --color_box0: #bbedde;
-  --color_box1: #ff8e8f;
-  --color_box2: #39afdb;
-  --color_box3: #9adff8;
-  --color_box4: #ffdb5e;
-  --color_box5: #dfc6f6;
-  --color_box6: #ffbee5;
-  --color_box7: #f88748;
-  --color_box8: #ffffff;
-  --color_box9: #000000;
-  --color_box10: #feffab;
-  --color_box11: #40dfaf;
-  --color_font: #212a3e;
 }
 
-.font__tittle {
-  font-family: var(--font-title);
-  font-size: 2.6rem;
-  font-weight: 400;
-  text-align: center;
-  color: var(--color_font);
-}
-
-.font__subtittle {
-  font-family: var(--font-subtitle);
-  font-size: 1.8rem;
-  font-weight: 500;
-  text-align: center;
-  color: var(--color_font);
-}
-
-.font__text {
-  font-family: var(--font-text);
-  font-size: 1.5rem;
-  font-weight: 400;
-  text-align: center;
-  line-height: 2rem;
-  color: var(--color_font);
-}
-
-/* RODAPÉ */
-.footer {
-  padding: 24px;
-  text-align: center;
-  background: linear-gradient(
-    90deg,
-    var(--color_box5) 100%,
-    var(--color_box6) 60%,
-    var(--color_box3) 30%,
-    var(--color_box2) 0%
+[data-contexto="focus"] {
+  --main-bg-color: linear-gradient(
+    180deg,
+    #ffd1e3 0%,
+    #7077a1 32%,
+    #5bbcff 100%
   );
+}
+
+[data-contexto="short-rest"] {
+  --main-bg-color: linear-gradient(
+    180deg,
+    #7fc7d9 0%,
+    #ad88c6 32%,
+    #7469b6 100%
+  );
+}
+
+[data-contexto="long-rest"] {
+  --main-bg-color: linear-gradient(
+    180deg,
+    #ad88c6 0%,
+    #f6b17a 32%,
+    #7077a1 100%
+  );
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html {
+  background: var(--main-bg-color);
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+body {
+  min-height: 100vh;
+  background: url("/img/geometric-patterns.png") center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+}
+
+/* HEADER */
+.app__logo-figure {
+  padding: 4rem 0;
+  font-size: 1.5rem;
+}
+
+.img-logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* BANNER */
+
+.app__section-banner-container {
+  padding: 20px;
+}
+
+.app__title {
+  font-family: var(--font-secondary);
+  font-size: 5.2rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 150%;
+  color: var(--color-secondary);
+}
+
+.app__title-strong {
+  font-weight: 600;
+}
+
+.app__figure {
+  width: 350px;
+}
+
+/* CARD POMODORO */
+
+.app__card {
+  border-radius: 3.2rem;
+  border: 0.2rem solid var(--color-third);
+  background: var(--fundo-card-timer);
+  padding: 2.4rem;
+  margin: 8rem 0;
+  width: 59rem;
+  max-width: 90%;
+}
+
+.app__card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app__card-button {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  background: none;
+  padding: 0.8rem;
+  color: var(--color-secondary);
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.app__card-button.active {
+  border-radius: 0.8rem;
+  background: var(--color-third);
+  font-weight: 600;
+}
+
+.app__card-timer {
+  color: var(--color-secondary);
+  font-family: var(--font-secondary);
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 3.2rem;
+  text-align: center;
+}
+
+.app__card-list-label {
+  color: var(--color-secondary);
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.app__card-primary-button {
+  padding: 0.8rem;
+  width: 15rem;
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 3.2rem;
+  background: var(--linear-botes);
+  margin-top: 3.2rem;
+  font-size: 1.8rem;
+}
+
+.app__card-primary-button:hover {
+  background: rgb(91, 188, 255, 0.3);
+  border: solid 1px;
+}
+
+.app__card-primary-button-icon {
+  width: 20%;
+}
+
+/* TOGGLER */
+.toggle {
+  cursor: pointer;
+}
+
+.toggle-switch {
+  background: #ccc;
+  border-radius: 1.6rem;
+  width: 5.8rem;
+  height: 3.2rem;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+
+.toggle-switch:before,
+.toggle-switch:after {
+  content: "";
+}
+
+.toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  transition: left 0.25s;
+}
+
+.toggle:hover .toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+  background: var(--lils);
+}
+
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 3rem;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* FOOTER */
+.app__footer {
+  width: 100%;
+  padding: 2.8rem 6rem;
+  background: #002e5d;
+}
+
+.app__footer-text {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  line-height: 150%;
+  color: rgba(182, 182, 182, 0.8);
+}
+
+.icons-footer {
+  width: 100px;
+}
+
+.link-footer {
+  text-align: center;
+}
+
+.cover__icons {
+  width: 30px;
+  height: 30px;
+}
+
+/* TABLETS */
+@media (max-width: 1024px) and (min-width: 451px) {
+  .app__figure {
+    width: 250px;
+  }
+  .app__title {
+    font-size: 3rem;
+  }
+
+  .app__card {
+    margin: 1rem 0 3rem 0;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 450px) {
+  .app__logo-figure {
+    padding: 2rem 0;
+  }
+
+  .app__figure {
+    width: 200px;
+  }
+
+  .app__title {
+    font-size: 2.5rem;
+  }
+
+  .app__card {
+    margin: 0 0 2rem 0;
+  }
+
+  .app__card-timer {
+    font-size: 6rem;
+  }
 }
