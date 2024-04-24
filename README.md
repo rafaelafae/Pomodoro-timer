@@ -4,9 +4,9 @@
 
 Este repositório contém o código fonte de um jogo da velha desenvolvido utilizando as linguagens HTML, CSS e JavaScript. O website apresenta uma interface amigável e responsiva.
 
-[Demo do projeto]()
+[Demo do projeto](https://pomodoro-timer-three-woad.vercel.app/)
 
-![Capa projeto]()
+![Capa projeto](https://github.com/rafaelafae/Pomodoro-timer/blob/main/img/Capa_tablet.png)
 
 ## Tecnologias Utilizadas:
 
