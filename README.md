@@ -1,4 +1,3 @@
-# EM DESENVOLVIMENTO
 
 # Pomodoro Timer
 
